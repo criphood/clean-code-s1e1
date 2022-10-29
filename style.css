@@ -7,42 +7,70 @@
   font-family: Lato, sans-serif;
 }
 
-.header {
+.title {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.header-image {
+.title__image {
   width: 100%;
 }
 
-.header .details {
+.title__details {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .header {
+  .title {
     text-align: center;
   }
 
 }
 
-.main {
+.container {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
+.adding__wrapper-task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
 }
 
-.task-wrapper {
+.adding__wrapper-task:focus {
+  color: #333;
+}
+
+.adding__wrapper-btn {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.adding__wrapper-btn:hover {
+  color: #3a3a3a;
+}
+
+.adding__wrapper {
   display: flex;
 }
 
@@ -76,8 +104,8 @@ button {
 }
 
 /* Heading */
-.block-name,
-.add-header {
+.section__header,
+.adding__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -105,7 +133,7 @@ button {
 }
 
 /* New Task */
-.add-header {
+.adding__header {
   display: block;
   margin: 0 0 20px;
 }
@@ -115,7 +143,7 @@ button {
 }
 
 /* Task list */
-.item {
+.list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -124,43 +152,44 @@ button {
   align-items: center;
 }
 
-.item>* {
+.list-item>* {
   vertical-align: middle;
 }
 
-.checkbox {
+.list-item__checkbox {
   margin: 0 10px;
 }
 
-.task {
+.list-item__task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+  flex-grow: 1;
 }
 
 .text {
   width: 226px;
 }
 
-.delete-image {
+.list-item__delete-image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete-image:hover {
+.list-item__delete-image:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#completed-tasks .task {
+#completed .list-item__task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.item .text {
+.list-item .text {
   display: none;
 }
 
