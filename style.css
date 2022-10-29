@@ -22,7 +22,8 @@ body {
   width: 100%;
 }
 
-.header .details {
+.header
+.details {
   font-family: fantasy, cursive;
 }
 
@@ -55,11 +56,13 @@ ul {
   padding: 0px;
 }
 
-li, h3 {
+li,
+h3 {
   list-style: none;
 }
 
-input, button {
+input,
+button {
   outline: none;
 }
 
@@ -156,21 +159,25 @@ input, button {
 }
 
 /* Completed */
-#completed-tasks .task {
+#completed-tasks
+.task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.item .text {
+.item
+.text {
   display: none;
 }
 
-.edit-mode .text {
+.edit-mode
+.text {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .editing {
+.edit-mode
+.editing {
   display: none;
 }
