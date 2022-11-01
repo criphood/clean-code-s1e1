@@ -35,13 +35,13 @@ var createNewTaskElement = function (taskString) {
   listItem.classList.add("list-item");
 
   label.innerText = taskString;
-  label.className = "list-item__task";
+  label.className = "list-item__task-label";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
   checkBox.className = "list-item__checkbox";
   editInput.type = "text";
-  editInput.className = "list-item__task text";
+  editInput.className = "list-item__task";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
   editButton.className = "list-item__edit button";
@@ -87,8 +87,8 @@ var editTask = function () {
 
   var listItem = this.parentNode;
 
-  var editInput = listItem.querySelector(".text");
-  var label = listItem.querySelector(".list-item__task");
+  var editInput = listItem.querySelector(".list-item__task");
+  var label = listItem.querySelector(".list-item__task-label");
   var editBtn = listItem.querySelector(".list-item__edit");
   var containsClass = listItem.classList.contains("edit-mode");
   //If class of the parent is .edit-mode

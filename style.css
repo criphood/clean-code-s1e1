@@ -1,7 +1,5 @@
 /* Basic Style */
 .wrapper {
-  /* margin: 0;
-  padding: 0; */
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -117,7 +115,7 @@ button {
   text-transform: uppercase;
 }
 
-.text {
+.list-item__task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -130,7 +128,7 @@ button {
   color: #888;
 }
 
-.text:focus {
+.list-item__task:focus {
   color: #333;
 }
 
@@ -163,7 +161,8 @@ button {
   margin: 0 10px;
 }
 
-.list-item__task {
+.list-item__task,
+.list-item__task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -173,7 +172,7 @@ button {
   align-items: center;
 }
 
-.text {
+.list-item__task {
   width: 226px;
 }
 
@@ -188,21 +187,20 @@ button {
 }
 
 /* Completed */
-#completed .list-item__task {
+#completed .list-item__task,
+#completed .list-item__task-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list-item .text {
-  display: none;
-}
-
-.edit-mode .text {
-  display: inline-block;
-  width: 224px;
-}
-
+.list-item .list-item__task,
+.edit-mode .list-item__task-label,
 .edit-mode .editing {
   display: none;
+}
+
+.edit-mode .list-item__task {
+  display: inline-block;
+  width: 224px;
 }
